@@ -1,3 +1,120 @@
 :root {
     background: #eae8dc;
-  }
+    font-family: "Bree Serif", serif;
+    font-weight: 200;
+    /* font-style: normal; */
+    /* Colors */
+    --delta-50: #f6f6f6;
+    --delta-100: #ebebe9;
+    --delta-200: #d6d5d2;
+    --delta-300: #bcbbb5;
+    --delta-400: #a7a59e;
+    --delta-500: #8d8a82;
+    --delta-600: #817d75;
+    --delta-700: #6c6862;
+    --delta-800: #595653;
+    --delta-900: #4a4844;
+    --delta-950: #272523;
+}
+/* Body */
+body{
+}
+
+.box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  background: var(--delta-200);
+}
+
+.logo{
+  object-fit: cover;
+}
+
+.nav-right{
+  margin: 0 25px
+}
+
+.nav-right h1{
+  font-size: 2vw;
+}
+
+/* ---Body main--- */
+.section-container{
+  padding: 50px;
+  display: flex;
+  height: calc(100vh - 300px);
+  flex-wrap: nowrap;
+  gap: 50px;
+}
+
+.input-encriptador, .output-encriptador {
+  width: 100%;
+  padding: 1rem;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.input-encriptador{
+  background: #dfd8d2;
+}
+
+textarea{
+  padding: 8px;
+  background: transparent;
+  border: none;
+  resize: none;
+  font-size: 20px;
+}
+
+/* textarea:focus-visible{
+  outline: none;  
+} */
+
+.text-input, .text-output{
+  width: 100%;
+  height: 85%;
+}
+
+.btn-encriptador{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-encriptar, .btn-desencriptar{
+  font-size: 20px;
+  padding: 4% 1em;
+  color: var(--delta-950);
+}
+
+/* ---Body Footer--- */
+.box-footer{
+  bottom: 0;
+  text-align: center;
+  padding: 20px;
+  background-color: #a7a59e;
+  margin-top: 5px;
+}
+
+.copyright{
+  color: #FFFFFF;
+  font-size: 15px;
+  margin: 20px;
+}
+
+.contact a{
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 2vw;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  
+}
