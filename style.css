@@ -1,5 +1,5 @@
 :root {
-    background: #eae8dc;
+    background: linear-gradient(var(--delta-200), var(--delta-50));
     font-family: "Bree Serif", serif;
     font-weight: 200;
     /* font-style: normal; */
@@ -17,9 +17,6 @@
     --delta-950: #272523;
 }
 /* Body */
-body{
-}
-
 .box{
   display: flex;
   justify-content: space-between;
@@ -38,6 +35,7 @@ body{
 
 .nav-right h1{
   font-size: 2vw;
+  color: var(--delta-500);
 }
 
 /* ---Body main--- */
@@ -55,10 +53,11 @@ body{
   flex-flow: column nowrap;
   justify-content: space-between;
   padding: 16px;
+  border-radius: 15px;
 }
 
 .input-encriptador{
-  background: #dfd8d2;
+  height: 100%;
 }
 
 textarea{
@@ -67,11 +66,12 @@ textarea{
   border: none;
   resize: none;
   font-size: 20px;
+  color: var(--delta-800);
 }
 
-/* textarea:focus-visible{
+textarea:focus-visible{
   outline: none;  
-} */
+}
 
 .text-input, .text-output{
   width: 100%;
@@ -85,36 +85,233 @@ textarea{
   align-items: center;
 }
 
-.btn-encriptar, .btn-desencriptar{
-  font-size: 20px;
-  padding: 4% 1em;
-  color: var(--delta-950);
+.mensaje-input{
+  font-size: 1vw;
+  color: var(--delta-500);
+  width: 100%;
+  margin-bottom:4px;
+  margin: 10px;
 }
+
+.mensaje-input span{
+  color: var(--delta-50);
+  background: var(--delta-500);
+  padding: 0 8px;
+  border-radius: 50%;
+}
+
+.btn-encriptar, .btn-desencriptar, .btn-copiar{
+  width: 45%;
+  height: 50px;
+  background: var(--delta-100);
+  color: var(--delta-950);
+  border: 1px solid var(--delta-700);
+  border-radius: 25px;
+}
+
+.btn-encriptar{
+  color: var(--delta-50);
+  background: linear-gradient(var(--delta-500), var(--delta-600));
+}
+
+button{
+  cursor: pointer;
+  transition: box-shadow 0.1s ease;
+}
+
+button:active{
+  box-shadow:inset 3px -3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.output-encriptador{
+  background: var(--delta-200);
+  position: relative;
+  height: 100%;
+  width: 50%;
+  box-shadow: 5px 5px 20px 1px var(--delta-900);
+}
+
+.text-output{
+  color: var(--delta-900);
+}
+
+.mensaje-output{
+  font-size: 2vw;
+  color: var(--delta-200);
+  width: 100%;
+  margin-bottom:4px;
+  margin: 10px;
+}
+
+.btn-copiar{
+  width: 100%;
+  height: 50px;
+}
+
+.cover{
+  width: 100%;
+  height: 100%;
+  background: var(--delta-100);
+  color: var(--delta-500);
+  position: absolute;
+  top:0;
+  left: 0;
+  display: flex;
+  flex-flow:column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.cover img{
+  width: 50%;
+}
+
+.cover h1{
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.cover p{
+  font-size: 1em;
+}
+
 
 /* ---Body Footer--- */
 .box-footer{
   bottom: 0;
-  text-align: center;
-  padding: 20px;
-  background-color: #a7a59e;
+  padding: 40px;
+  background-color: var(--delta-700);
   margin-top: 5px;
 }
 
+.contact-info{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
 .copyright{
-  color: #FFFFFF;
-  font-size: 15px;
+  color: var(--delta-50);
+  font-size: 1vw;
   margin: 20px;
+}
+
+.contact{
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
 }
 
 .contact a{
   text-transform: uppercase;
-  color: #ffffff;
-  font-size: 2vw;
+  color: var(--delta-50);
+  font-size: 3vw;
   text-decoration: none;
   list-style-type: none;
+  color: white;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
+.contact a:hover{
+  color: var(--delta-200);
+}
+
+.fa {
+  padding: 20px;
+  width: 60px;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+@media (max-width: 900px) {
+  /* Body */
+  .section-container{
+    width: 90%;
+    height: auto;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+
+  .input-encriptador{
+    width: 100%;
+  }
+
+  .output-encriptador{
+    width: 100%;
+  }
+
+  .cover img{
+    display: none;
+  }
+
+  .nav-right h1{
+    font-size: 3vw;
+  }
+
+  .mensaje-input{
+    font-size: 2vw;
+  }
+
+  /* ---Body Footer--- */
+  .copyright{
+    font-size: 2vw;
+  }
+
+  .contact a{
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 650px) {
+  .section-container{
+    width: 80%;
+    height: auto;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin: 0 0;
+    padding: 10px 20px;
+    gap: 0;
+  }
+
+  .input-encriptador{
+    margin: 0 0;
+  }
+
+  .btn-encriptar, .btn-desencriptar{
+    width:  100%;
+    margin: 5px;
+  }
+
+  .output-encriptador{
+    margin: 0 0;
+  }
+
+  .nav-right h1{
+    font-size: 4.5vw;
+  }
+
+  .mensaje-input{
+    font-size: 3vw;
+  }
+
+  /* ---Body Footer--- */
+  .contact-info {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .copyright {
+    width: 100%; /* Make the copyright take up full width */
+    font-size: 4vw; /* Adjust font size */
+    text-align: center; /* Center align the text */
+  }
   
+  .contact a{
+    justify-content: center; /* Center align the social URLs */
+    font-size: 10vw;
+  }
 }

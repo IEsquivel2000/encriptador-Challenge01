@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/pages/reset.css" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -26,7 +27,7 @@
                 <div class="input-encriptador">
                     <textarea oninput="minuscula_check();" id="text-input" class="text-input" name="text-input" cols="50" rows="10" placeholder="Ingrese el texto aqui"></textarea>
                     <div class="btn-encriptador">
-                        <label class="mensaje-entrada" for="input"><span>&#33;</span>Solo letras minúsculas y sin acento</label>
+                        <label class="mensaje-input" for="input"><span>&#33;</span> Solo letras minúsculas y sin acento</label>
                         <button id="btn-encriptar" class="btn-encriptar">Encriptar</button>
                         <button id="btn-desencriptar" class="btn-desencriptar">Desencriptar</button>
                     </div>
@@ -34,11 +35,12 @@
                 <div class="output-encriptador">
                     <textarea id="text-output" class="text-output" name="text-output" cols="50" rows="10" readonly></textarea>
                     <div class="caja-copiar">
+                        <label class="mensaje-output" for="output"><span>Solo es texto</span></label>
                         <button id="btn-copiar" class="btn-copiar" >Copiar</button>
                     </div>
                     <div id="cover" class="cover">
-                        <!-- <img src="./public/Muneco.png" alt="mago gemologo"> -->
-                        <h4>Ningun mensaje fue encontrado</h4>
+                        <img src="./public/Muneco.png" alt="mago gemologo">
+                        <h1>Ningun mensaje fue encontrado</h1>
                         <p>Ingresa el texto que desees encriptar o desencriptar.</p>
                     </div>
                 </div>
@@ -46,11 +48,13 @@
         </main>
         <footer>
             <div class="box-footer">
-                <p class="copyright">&copy; Copyright Isaac Esquivel - 2024</p>
-                <ul class="contact">
-                    <li><a href="https://www.linkedin.com/in/isaac-esquivel-9a5713193">Linkedin</a></li>
-                    <li><a href="https://https:github.com/IEsquivel2000">Github</a></li>
-                </ul>
+                <div class="contact-info">
+                    <p class="copyright">&copy; Copyright Isaac Esquivel - 2024</p>
+                    <ul class="contact">
+                        <a href="https://www.linkedin.com/in/isaac-esquivel-9a5713193" class="fa fa-linkedin"></a>
+                        <a href="https://https:github.com/IEsquivel2000" class="fa fa-github"></a>
+                    </ul>
+                </div>
             </div>
         </footer>
     </div>
