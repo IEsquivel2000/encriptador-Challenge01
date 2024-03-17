@@ -47,6 +47,7 @@ function clearText(elemento) {
 
 function habilitarBotones() {
     btnCopiar.removeAttribute("disabled");
+    btnCopiar.removeAttribute("hidden");
     cover();
     coverTablet();
   }
